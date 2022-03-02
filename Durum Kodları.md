@@ -1,12 +1,19 @@
 ## Roket Durum Kodları
 ### 2xx -> OK
 200 -> Görev Bilgisayarı Başarıyla Çalışıyor
+
 201 -> Kontroller Bitti, Ateşleme Bekleniyor
+
 202 -> Ateşleme Başladı
+
 203 -> Yakıt Tükendi	
+
 210 -> Tepe Noktası
+
 211 -> Ayrılma
+
 220 -> Paraşüt Açma
+
 230 -> Başarılı Bir Şekilde İniş Gerçekleşti
 
 ### 3xx -> REDIRECT
