@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/maStyle.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+    <!-- MATERIAL ICON -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"rel="stylesheet">
+    <!-- CHART JS -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <img src="./img/logos.svg" alt="logo" class="logo">
+                <h2>ROKET <span class="color">TAKIMI</span></h2>
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">close</span>
+                </div>
+                <div class="sidebar">
+                    <a href="#">
+                        <span class="material-icons-sharp">grid_view</span>
+                        
+                        <h3>Dashboard</h3>
+                    </a>
+                    <a href="#" class="active">
+                        <span class="material-icons-sharp">rocket_launch</span>
+                        <h3>Rocket</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">location_on</span>
+                        <h3>Maps</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">leaderboard</span>
+                        <h3>Chart</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">percent</span>
+                        <h3>Static</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">info</span>
+                        <h3>Info</h3>
+                    </a>
+                </div>
+        </aside>
+        <!-- END OF ASIDE -->
+
+        <main>
+            <h1>DASHBOARD</h1>
+
+            <div class="insights">
+                <div class="sales">
+                    <span class="material-icons-sharp">analytics</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Sales</h3>
+                            <h1>$25,024</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-- END OF SALES -->
+                <div class="expenses">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Expenses</h3>
+                            <h1>$25,024</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>62%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-- END OF EXPENSES -->
+                <div class="income">
+                    <span class="material-icons-sharp">analytics</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Sales</h3>
+                            <h1>$10,028</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>41%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-- END OF INCOME -->
+            </div>
+            <div class="recent-tables">
+                <h2>Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Number</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>About Product name</td>
+                            <td>85872</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>About Product name</td>
+                            <td>85872</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>About Product name</td>
+                            <td>85872</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>About Product name</td>
+                            <td>85872</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+             <!-- END OF TABLES -->
+
+             <div class="container-small">
+             <div class="chart">
+                <h2>Chart</h2>
+                <div class="chart-area">
+                    <canvas id="myChart" width="400" height="150"></canvas>
+                </div> 
+             </div>
+            </div>
+        </main>
+        <!-- END OF MAIN -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-togger">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+            </div>
+            <!-- END OF TOP -->
+            <div class="recent-updates">
+                <h2>Recent Updates</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="icon">
+                            <span class="material-icons-sharp">settings</span>
+                        </div>
+                        <div class="message">
+                            <p><b>Info</b> about GPS</p>
+                            <small class="text-muted ">2 Minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="icon">
+                            <span class="material-icons-sharp">report_problem</span>
+                        </div>
+                        <div class="message">
+                            <p><b>Info</b> about GPS</p>
+                            <small class="text-muted ">2 Minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="icon">
+                            <span class="material-icons-sharp">dangerous</span>
+                        </div>
+                        <div class="message">
+                            <p><b>Info</b> about GPS</p>
+                            <small class="text-muted ">2 Minutes ago</small>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+          
+            <div class="button-areas">
+                <h2>Button</h2>
+                <div class="button-area">
+                    <div class="icon">
+                        <span class="material-icons-sharp">dangerous</span>
+                    </div>
+                    <div class="message">
+                        <p><b>Info</b> about GPS</p>
+                        <small class="text-muted ">are you sure?</small>
+                    </div>
+                    <div class="button">
+                        <button>Active</button>
+                    </div>
+                </div>
+                <div class="button-area">
+                    <div class="icon">
+                        <span class="material-icons-sharp">dangerous</span>
+                    </div>
+                    <div class="message">
+                        <p><b>Info</b> about GPS</p>
+                        <small class="text-muted ">are you sure?</small>
+                    </div>
+                    <div class="button">
+                        <button>Active</button>
+                    </div>
+                </div>
+            </div>
+            <div class="map-area">
+                <h2>Map</h2>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.1527162143534!2d39.18608331327858!3d38.67349601929583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40769461bdafae5b%3A0x68fcb6eb504c1c28!2zWWFsbsSxeiwgMjMzNTAgWWFsbsSxei9FbMOiesSxxJ8gTWVya2V6L0VsYXrEscSf!5e0!3m2!1str!2str!4v1646223295201!5m2!1str!2str" width="270" height="310" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+             </div>
+        </div>
+        
+    </div>
+
+
+
+    <div class="colored">
+        <div class="circle_blue"></div>
+        <div class="circle_pink"></div>
+    </div>
+   
+    <!-- CHART.JS -->
+    <script src="js/chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,572 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+/* ROOT VARAIBLES */
+:root{
+    --color-primary: #8985f5;
+    --color-secondary: #F976EC;
+    --color-danger: #f35e5e;
+    --color-success: #6ee463;
+    --color-warning: #cfcd3b;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light:#dce1eb;
+    --color-dark:#363949;
+    --color-light:rgba(132,139,200,0.18);
+    --color-primary-variant:#677483;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --boder-radius-1: 0.4rem;
+    --boder-radius-2: 0.8rem;
+    --boder-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    --box-shadow-to-text: 0 0.1rem 2rem var(--color-primary);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+a{
+    color: var(--color-dark);
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+    transition: all 300ms ease;
+}
+h1:hover{
+    opacity: 0.8;
+}
+h1:hover{
+    opacity: 0.8;
+}
+h2{
+    font-size: 1.4rem;
+    transition: all 300ms ease;
+}
+h2:hover{
+    opacity: 0.8;
+}
+h3{
+    font-size:0.87rem;
+    transition: all 300ms ease;
+}
+h3:hover{
+    opacity: 0.8;
+}
+h4{
+    font-size: 0.8rem;
+    transition: all 300ms ease;
+}
+h4:hover{
+    opacity: 0.8;
+}
+h5{
+    font-size: 0.77rem;
+    transition: all 300ms ease;
+}
+h5:hover{
+    opacity: 0.8;
+}
+
+small{
+    font-size: 0.75rem;
+    transition: all 300ms ease;
+}
+small:hover{
+    opacity: 0.8;
+}
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark-variant);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.danger{
+    color: var(--color-danger);
+}
+.success{
+    color: var(--color-success);
+}
+.warning{
+    color: var(--color-warning);
+}
+/* COLORED BACKGROUND*/
+.colored{
+    position: relative;
+}
+.circle_pink{
+    position: fixed;
+    right: 725px;
+    top: 480px;
+
+    z-index: -1;
+    opacity: 65%;
+    filter: blur(65px);
+    background-color: var(--color-secondary);
+    border-radius: 100%;
+    width: 520px;
+    height: 520px;
+}
+.circle_blue{
+    position: fixed;
+    bottom: 120px;
+    right: 0;
+    width: 300px;
+    left: 850px;
+
+    z-index: -1;
+    opacity: 65%;
+    filter: blur(45px);
+    background-color: var(--color-primary);
+    border-radius: 100%;
+    width: 793px;
+    height: 793px;
+}
+/* SPECIFIC STYLE */
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 16rem auto 23rem;
+}
+
+aside{
+    height: 100vh;
+}
+
+aside .top{
+    display: flex;
+    align-items: center;
+    margin-top: 1.4rem;
+}
+aside .logo{
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+aside .logo  {
+    width: 2rem;
+    height: 2rem;
+
+}
+
+aside .close{
+    display: none;
+}
+
+/* SIDEBAR */
+
+aside .sidebar{
+   
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+
+aside .color{
+    color: var(--color-primary);
+}
+aside h3{
+    font-weight: 500;
+}
+
+aside .sidebar a{
+    display: flex;
+    color: var(--color-info-dark);
+    margin: 1rem;
+    gap:1rem;
+    align-items: center;
+    position: relative;
+    height: 3rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+
+aside .sidebar a.active{
+    color: var(--color-secondary);
+    margin-left: 0; 
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--color-secondary);
+}
+
+aside .sidebar a.active span{
+    color: var(--color-secondary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .side a:hover{
+    color: var(--color-secondary);
+
+}
+
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+}
+
+/* MAIN */
+
+ main{
+     margin-top: 1.4rem;
+ }
+
+ main .insights{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     gap:1.6rem;
+ }
+main .insights > div {
+    margin-top: 1rem;
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .insights > div:hover{
+    box-shadow: none;
+}
+main .insights > div span {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+main .insights > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+
+main .insights .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+main .insights svg{
+    width: 7rem;
+    height: 7rem; 
+}
+
+main .insights svg circle{
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+
+main .insights .sales svg circle{
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main .insights .expenses svg circle{
+    stroke-dashoffset: 15;
+    stroke-dasharray: 80;
+}
+
+main .insights .income svg circle{
+    stroke-dashoffset: 35;
+    stroke-dasharray: 110;
+}
+
+main .insights .progress .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .insights small{
+    margin-top: 1.6rem;
+    display: block;
+}
+
+/* RECENT TABLES */
+main .recent-tables{
+    margin-top: 2rem;
+}
+
+main .recent-tables h2{
+    margin-bottom: 0.8rem;
+}
+
+main .recent-tables table{
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--card-padding);
+    text-align: center;
+    width: 100%;
+    transition: all 300ms ease;
+}
+
+main .recent-tables table:hover{
+    box-shadow: none;
+}
+
+main .recent-tables table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+}
+main .recent-tables table tbody tr:last-child td{
+    border: none;
+}
+
+.container-small{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+/* chart */
+
+.chart {
+
+    margin-top: 2rem;
+}
+.chart h2{
+    margin-bottom: 0.8rem;
+}
+.chart .chart-area{
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--card-padding);
+    text-align: center;
+    width: 100%;    
+    transition: all 300ms ease;
+}
+
+.chart canvas::before{
+    box-shadow: none;
+}
+
+/* right */
+
+.right{
+    margin-top: 1.4rem;
+}
+.right .top{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+
+}
+.right .top button{
+    display: none;
+}
+.right .theme-togger{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--boder-radius-1);
+}
+.right .theme-togger span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .theme-togger span.active{
+    background: var(--color-secondary);
+    color: white;
+    border-radius: var(--boder-radius-1);
+}
+
+
+/* RECENT UPDATE */
+.right .recent-updates{
+        margin-top: 1rem;
+}
+
+.right .recent-updates h2{
+    margin-bottom: 0.8rem;
+    color: var(--color-dark);
+}
+
+.right .recent-updates .updates{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300 ease;
+}
+
+.right .recent-updates .updates:hover{
+    box-shadow: none;
+}
+
+.right .recent-updates .updates .update{
+    display: grid;
+    grid-template-columns: 2.6rem auto;
+    gap:1rem;
+    margin-bottom: 1rem;
+}
+
+.right .recent-updates .updates .update .icon span{
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 0.3rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: all 300ms ease;
+}
+
+.right .button-areas{
+    margin-top: 2.3rem;
+}
+
+.right .button-areas h2{
+    margin-bottom: 1.2rem;
+    color: var(--color-dark);
+}
+
+
+
+.right .button-areas .button-area{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    margin-bottom: 0.8rem;
+}
+}
+
+.right .button-areas .button-area:hover{
+    box-shadow: none;
+    
+}
+
+.right .button-areas .button-area .icon{
+    padding: 0 1rem 0 0 ;
+    
+    color: var(--color-primary);
+
+}
+.right .button-areas .button-area .icon span{
+    font-size: 2rem;
+}
+.right .button-areas .button-area .button button{
+    margin-left: 2rem;
+    padding: 0.8rem 2.3rem;
+    border-radius: var(--boder-radius-3);
+    background: var(--color-secondary);
+    color: var(--color-white);
+    transition: all 300ms ease;
+}
+
+.right .button-areas .button-area .button button:hover{
+    opacity: 0.8;
+}
+
+.right .map-area{
+    margin-top: 5rem;
+}
+
+.right .map-area h2{
+    margin-bottom: 0.8rem;
+}
+
+.right .map-area .map{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    width: 100%;
+}
+.right .map-area .map:hover{
+    box-shadow: none;
+}
